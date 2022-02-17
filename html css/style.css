@@ -171,7 +171,7 @@ transform: ease-in 0.35s;
 ul.menu1
 {
 	width: 250px;
-	background: #6d136a;
+	background: #dbf0f3;
 	min-height: 80px;
 	display: none;
 	position: absolute;
@@ -195,20 +195,21 @@ ul.menu1 li a
 ul.root > li:hover ul.menu1{
 		display: block;
 		
-		background-color: #6d136a;
+		background-color: #010607;
 		color: red;
 		transform: ease-in 0.35s;
 		position: relative;
+		z-index: 999;
 	}
 ul.menu1 li a:hover{
-		background-color: yellow;
+		background-color: rgb(26, 245, 55);
 		color: red;
 		transform: ease-in 0.35s;
 		position: relative;
 	}
 ul.menu2{
 	width: 250px;
-	background: #6d136a;
+	background: #dbf0f3;
 	min-height: 80px;
 	display: none;
 	position: absolute;
@@ -230,14 +231,14 @@ ul.menu2 li a
 	}
 ul.root > li:hover ul.menu2{
 		display: block;
-		
-		background-color: #6d136a;
+		z-index: 999;
+		background-color: black;
 		color: red;
 		transform: ease-in 0.35s;
 
 	}
 ul.menu2 li a:hover{
-		background-color: yellow;
+		background-color: rgb(26, 245, 55);
 		color: red;
 		transform: ease-in 0.35s;
 	}
