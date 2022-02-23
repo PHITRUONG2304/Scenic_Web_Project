@@ -3,237 +3,298 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DropDown Menu and slider</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link href="fontawesome-free-6.0.0-web/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/base-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-min.css">
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </style>
 </head>
 <body>
-	<div>
-	<nav>
+	<div class="header">
 		<div class="logo">
-			<img src="image/web logo ver2.png" style="width:160px;height:65px;" >
+			<img src="image/webLogoVer2.png" style="width:160px;height:70px;" >
 		</div>
-		<div class="box">
-			<div class="search">
-				<input type="text" name="" placeholder="Tìm kiếm...">
-				<button>
-					<img src="image/icon 1.png" alt="">
-				</button>
-			</div>
+		<div class="search">
+			<input type="text" name="" placeholder="Tìm kiếm...">
+			<button id="searchBtn">
+				<i class="fa-solid fa-magnifying-glass"></i>
+			</button>
+		</div>
 
+		<div class=	"contact">
+			<div>
+				<img src="image/ic_phone.png" style="width:30px;height:30px;">
+				<p>0123456789</p>
+			</div>
+			<div>
+				<img src="image/ic_email.png" style="width:30px;height:30px;">
+				<p>vietnamss@gmail.com</p>
+			</div>
 		</div>
 	
-	</nav>  
+	</div>  
 	
-		<div class="slidershow">
-			<div class="slides">
-				<input type="radio" name="bottom" id="bottom_1" checked>
-				<input type="radio" name="bottom" id="bottom_2">
-				<input type="radio" name="bottom" id="bottom_3">
-				<input type="radio" name="bottom" id="bottom_4">
-				
-				<div class="slide s1">
-					<img src="image/image1.jpg">
-				</div>
-				<div class="slide">
-					<img src="image/image2.jpg">
-				</div>
-				<div class="slide">
-					<img src="image/image3.jpg">
-				</div>
-				<div class="slide">
-					<img src="image/image4.jpg">
-				</div>
-				
+	<div class="slidershow">
+		<button onclick="handleBtn(1)" id="arrowLeft">
+			<i class="fa-solid fa-circle-left" style="font-size: 60px;"></i>
+		</button>
+		<div class="slides">
+			<div class="slide s1">
+				<img src="image/image1.jpg">
 			</div>
-			<div class="navigation">
-				<label for="bottom_1" class="bar"></label>
-				<label for="bottom_2" class="bar"></label>
-				<label for="bottom_3" class="bar"></label>
-				<label for="bottom_4" class="bar"></label>
+			<div class="slide">
+				<img src="image/image2.jpg">
+			</div>
+			<div class="slide">
+				<img src="image/image3.jpg">
+			</div>
+			<div class="slide">
+				<img src="image/image4.jpg">
+			</div>
 			
-			</div>
 		</div>
-	
-	
-		<div class="container">
-			<div class="menu" >
-				<ul class="root">
-					<li><a href="#">Khu vực</a>
-						<ul class="menu1">
-							<li><a href="#">Miền Bắc</a></li>
-							<li><a href="#">Miền Trung </a></li>
-							<li><a href="#">Miền Nam</a></li>
-						</ul>
-						</li>
-					<li><a href="#">Thời gian lí tưởng</a>
-						<ul class="menu2">
-							<li><a href="#">Mùa Xuân</a></li>
-							<li><a href="#">Mùa Hạ</a></li>
-							<li><a href="#">Mùa Thu</a></li>
-							<li><a href="#">Mùa Đông</a></li>
-						</ul>
-						</li>
-					
-				</ul>
-			</div>
-			<div class="box1">
-				<div class="search1">
-					<input type="text" name="" placeholder="Tìm kiếm...">
-					<button>
-						<img src="image/icon 1.png" alt="">
-					</button>
-				</div>
-	
-			</div>
-	</div>
-	
-	<div class="conten">
-		<div class="item">
-			<div class="boxed" style="margin: 20 auto;">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
-		</div>
-		<div class="item">
-			<div class="boxed">
-				<a href="#">
-					<img src="image/ghềnh đá địa 3.jpg" alt="">
-				</a>
-			</div>
+		<button onclick="handleBtn(2)" id="arrowRight">
+			<i class="fa-solid fa-circle-right" style="font-size: 60px;"></i>
+		</button>
+		<div class="navigation">
+			<label id="bottom_1" for="bottom_1" class="bar"></label>
+			<label id="bottom_2" for="bottom_2" class="bar"></label>
+			<label id="bottom_3" for="bottom_3" class="bar"></label>
+			<label id="bottom_4" for="bottom_4" class="bar"></label>
+		
 		</div>
 		
 	</div>
 
-	<div class="end">
-		<div class="logo1">
-			<img src="image/web logo ver2.png" >
+	<div class="container1">
+		<div class="menu" >
+			<ul class="root">
+				<li>
+					<button >Khu vực</button>
+					<ul class="menu-list">
+						<li>
+							<span>Miền Bắc</span>
+							<input type="checkbox"/>
+						</li>
+						<li>
+							<span>Miền Trung</span>
+							<input type="checkbox"/>
+						</li>
+						<li>
+							<span>Miền Nam</span>
+							<input type="checkbox"/></li>
+					</ul>
+				</li>
+				<li>
+					<button>Thời gian lí tưởng</button>
+					<ul class="menu-list">
+						<li>
+							<span>Mùa Xuân</span>
+							<input type="checkbox"/>
+						<li>
+							<span>Mùa Hạ</span>
+							<input type="checkbox" href="#"/></li>
+						<li>
+							<span>Mùa Thu</span>
+							<input type="checkbox" href="#"/>
+						</li>
+						<li>
+							<span>Mùa Đông</span>
+							<input type="checkbox" href="#"/>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button>Loại hình</button>
+					<ul class="menu-list">
+						<li>
+							<span>Biển, sông, suối</span>
+							<input type="checkbox" href="#"/>
+						</li>
+						<li>
+							<span>Đồi núi</span>
+							<input type="checkbox" href="#"/>
+						</li>
+						<li>
+							<span>Hang động</span>
+							<input type="checkbox" href="#"/>
+						</li>
+						<li>
+							<span>Thành phố</span>
+							<input type="checkbox" href="#"/>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button> <img src="image/icon 1.png" style="width: 50px; height: 50px;"/></button>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="item">
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+				<div class="boxed">
+					<img src="image/ghềnh đá địa 3.jpg">
+					<div class="item-info">
+						<h2 class="item-name">Gềnh đá địa</h2>
+						<p class="item-address">Phú Yên</p>
+						<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
+							 và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
+							  tỉnh Phú Yên</p>
+					</div>
+				</div>
+			</div>			
 		</div>
 	</div>
+	
+
+
+	<div class="end">
+		<img src="image/webLogoVer2.png" style="width:20px;height:20px" >
+	</div>
+	<script>
+		var margin = 0;
+		var interval_slides = setInterval(changeImg, 7500);
+		document.querySelector("#bottom_1").style.backgroundColor = "#fff";
+		document.querySelector("#bottom_1").style.transform = "scale(1.5, 1.5)";
+		function changeImg(){
+			margin -= 20;
+			if(margin < -60){
+				margin = 0;
+			}
+			var img = document.querySelector(".s1");
+			img.style.marginLeft = margin + "%";
+			zoombtnSlide(margin);
+		}
+
+		function handleBtn(number){
+			clearInterval(interval_slides);
+			var img = document.querySelector(".s1");
+			switch(number){
+				case 1:arguments
+					margin += 20;
+					break;
+				case 2:arguments
+					margin -= 20;
+					break;	
+			}
+			if(margin > 0){
+				margin = -60;
+			}
+			else if (margin < -60){
+				margin = 0;
+			}
+			img.style.marginLeft = margin + "%";
+			zoombtnSlide(margin);
+			interval_slides = setInterval(changeImg, 7500);
+		}
+
+		function zoombtnSlide(number){
+			let bottom, oldBottom;
+			switch(number){
+				case 0:
+					bottom = document.querySelector("#bottom_1");
+					break;
+				case -20:
+					bottom = document.querySelector("#bottom_2");
+					break;
+				case -40: 
+					bottom = document.querySelector("#bottom_3");
+					break;
+				case -60: 
+					bottom = document.querySelector("#bottom_4");
+					break;
+			}
+
+			document.querySelectorAll(".navigation .bar").forEach(element => {
+				element.style.removeProperty("background-color");
+				element.style.removeProperty("transform");
+			});
+
+			bottom.style.backgroundColor = "#fff";
+			bottom.style.transform = "scale(1.5, 1.5)";
+		}
+	</script>
 </body>
+
+
 </html>
