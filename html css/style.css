@@ -458,8 +458,78 @@ ul.root>li:hover::after,ul.root>li:focus::after{
 	border-radius: 100%;
 	color: #fff;
 }
-  
-.end {
-	height: 100px;
-	background-color: #333;
+.footer {
+	width: 100%;
+	height: 420px;
+	background-color: #ccf2f4
+
+} 
+.end1 {
+	height: 100%;
+	width: 33%;
+	float: left;
+	margin: 0;
+}
+.end1 p{
+	margin-top: 0px;
+	color: #2b4f60;
+	margin-left: 90px;
+	font-size:x-large;
+}
+.end1 img{
+	height: 120px;
+	width: 280px;
+	margin: 50px 70px;
+}
+.end2{
+	height: 100%;
+	width: 40%;
+	float: left;
+}
+
+
+.contact1 {
+	margin-left: 100px;
+	margin-top: 100px;
+	font-size: 50px;
+	color: #2b4f60;
+	
+}
+
+.xxx {
+	margin-top: 30px;
+	float: left;
+}
+.xxx div{
+	margin: 20px 90px;
+	color: #2b4f60;
+	font-weight: 550;
+	display: flex;
+}
+.xxx p{
+	color: #2b4f60;
+	margin: 4px 0 5px 5px;
+	margin-left: 5px;
+	margin-top: 4px;
+	font-weight: 200;
+	font-size: 30px;
+}
+
+.nine{
+padding-top: 80px;
+font-size: 70px;
+color: #2b4f60;
+}
+.ninenine {
+color: #2b4f60;
+margin-top: 30px;
+font-size: 70px;
+}
+.viewed {
+	color: #2b4f60;
+	font-size: 30px;
+}
+.onlined {
+	color: #2b4f60;
+	font-size: 30px;
 }
