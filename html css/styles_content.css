@@ -130,7 +130,6 @@ li{
 .content .details{
 	width: 70%;
 	background-color: #F4F9F9;
-	padding: 0 5px;
 	position: relative;
 }
 .header-content{
@@ -138,6 +137,7 @@ li{
 	height: 129px;
 	display: flex;
 	position: relative;
+	padding: 0 10px;
 }
 .header-content .header-left-content{
 	position: absolute;
@@ -155,15 +155,13 @@ li{
 	font-size: 48px;
 	font-weight: 400;
 	position: absolute;
-	right: 0;
+	right: 10px;
 	bottom: 0;
 }
 .detail-content{
 	margin-top: 20px;
 	display: flex;
-	margin-right: -6px;
-    margin-left: -6px;
-
+	width: 98.5%;
 }
 .top-nav{
 	width: calc(100%/5);
@@ -173,7 +171,8 @@ li{
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	transition: all 0.5s;
-	box-shadow: -10px -10px 10px -10px rgb(145, 144, 144);
+	border-right: solid 2px rgba(0, 0, 0, 0.144);
+	box-shadow: inset 0px -11px 10px -10px rgb(161, 160, 160); 
 }
 .top-nav>button{
 	border: none;
@@ -186,23 +185,24 @@ li{
 	height: 58px;
 	margin-top: -8px;
 	background-color: #CCF2F4;
+	box-shadow: -0.5px -3px 5px rgba(0, 0, 0, 0.5);
 }
 .detail-content .scaleChoose button{
 	font-size: 24px;
+	outline: none;
 }
 .details .content-block{
 	padding: 10px 50px;
 	width: calc(70vw - 2 * 5px);
 	height: calc(100vh - 129px - (20px + 50px));
 	align-items: center;
-	background-color: transparent;
-	/* position: absolute; */
-	top: calc(129px + 20px + 50px);
-	left: 0px;
-	margin-left: -6px;
-	margin-top: -6px;
+	box-shadow: 0 -2px 2px -2px rgb(0, 0, 0),
+	0 2px 15px -5px rgb(0, 0, 0),
+	2px 0 5px -5px rgb(0, 0, 0);
 	background-color: #CCF2F4;
-	box-shadow: -10px -10px 10px -10px rgb(145, 144, 144);
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 .details .inside-content{
 	margin: auto;
