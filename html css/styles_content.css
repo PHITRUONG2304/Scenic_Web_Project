@@ -1,0 +1,218 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+li{
+	list-style: none;
+}
+.header{
+	background: rgba(245, 245, 245, 0.5) ;
+	z-index: 1;
+	width: 100%;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.315);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header div {
+	display:block;
+}
+.header .logo{
+	float: left;
+	color: white;
+	font-size: 30px;
+	font-weight: 600px;
+	padding: 10px 5px;
+}
+
+.search {
+	position: relative;
+	height: 52px;
+	width: 50%;
+	background-color: rgba(252, 252, 252, 0.8);
+	border-radius: 15px;
+	margin-left: 200px;
+	margin-right: 150px;
+	border: solid 1px #000;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.315);
+}
+.search input{
+	position: absolute;
+	left: 20px;
+	width: 85%;
+	height: 100%;
+	font-size: 22px;
+	border-width: 0;
+	color: #000;
+	background: transparent;
+	text-shadow: 2px 2px 5px rgba(97, 95, 95, 0.7);
+}
+.search input:focus{
+	outline: none;
+	border: none;
+}
+.search #searchBtn{
+	position: absolute;
+	top: 5px;
+	right: 30px;
+	height: 80%;
+	background-color:  transparent;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	border-left: inset 3.5px rgba(0, 0, 0, 0.15);
+	padding-left: 30px;
+}
+.search #searchBtn i{
+	font-size: 28px;
+	text-align: center;
+	color: rgba(0, 0, 0, 0.514);
+	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.contact {
+	margin-top: 10px;
+	float: left;
+}
+.contact div{
+	color: #000;
+	font-weight: 550;
+	display: flex;
+}
+.contact p{
+	color: #000;
+	margin: 4px 0 5px 5px;
+	margin-left: 5px;
+	margin-top: 4px;
+	font-weight: 200;
+	font-size: 18px;
+}
+
+
+/*-------------------------------------*/
+
+.slidershow{
+    width: 100%;
+    height: 100vh;
+	overflow: hidden;
+    background-image: url(./image/img_GenhDaDia/img01.jpg);
+    background-size: 120%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+	transition: all 1s;
+}
+
+/* ------------------------------------------ */
+
+.content{
+	width: 100%;
+	height: auto;
+	display: flex;
+	background-color: #E5E5E5;
+}
+.content .leftnav{
+	width: 15%;
+	height: 100vh;
+	text-align: center;
+}
+.leftnav button{
+	border: none;
+	background-color: transparent;
+	margin: 20px 0;
+	cursor: pointer;
+}
+.content .details{
+	width: 70%;
+	background-color: #F4F9F9;
+	padding: 0 5px;
+	position: relative;
+}
+.header-content{
+	width: 100%;
+	height: 129px;
+	display: flex;
+	position: relative;
+}
+.header-content .header-left-content{
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+}
+.header-left-content h1{
+	font-size: 64px;
+	font-weight: 400;
+}
+.header-content .view-counter{
+	width: 50%;
+}
+.view-counter h2{
+	font-size: 48px;
+	font-weight: 400;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.detail-content{
+	margin-top: 20px;
+	display: flex;
+}
+.top-nav{
+	width: calc(100%/5);
+	height: 50px;
+	text-align: center;
+	background-color: #EBEDED;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	transition: all 0.5s;
+}
+.top-nav>button{
+	border: none;
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+}
+.detail-content .scaleChoose{
+	height: 58px;
+	margin-top: -8px;
+	background-color: #CCF2F4;
+}
+.detail-content .scaleChoose button{
+	font-size: 24px;
+}
+.details .content-block{
+	padding: 10px 50px;
+	width: calc(70vw - 2 * 5px);
+	height: calc(100vh - 129px - (20px + 50px));
+	align-items: center;
+	background-color: transparent;
+	position: absolute;
+	top: calc(129px + 20px + 50px);
+	left: 0px;
+}
+.details .inside-content{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 5px;
+	text-align: center;
+}
+.inside-content img{
+	margin: 10px 0;
+	width: 80%;
+	height: auto;
+}
+.inside-content p{
+	text-align: justify;
+}
+.addr-block img{
+	border: solid 5px rgba(0, 0, 0, 0.623);
+	border-radius: 50px;
+}
