@@ -161,6 +161,9 @@ li{
 .detail-content{
 	margin-top: 20px;
 	display: flex;
+	margin-right: -6px;
+    margin-left: -6px;
+
 }
 .top-nav{
 	width: calc(100%/5);
@@ -170,6 +173,7 @@ li{
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	transition: all 0.5s;
+	box-shadow: -10px -10px 10px -10px rgb(145, 144, 144);
 }
 .top-nav>button{
 	border: none;
@@ -192,9 +196,13 @@ li{
 	height: calc(100vh - 129px - (20px + 50px));
 	align-items: center;
 	background-color: transparent;
-	position: absolute;
+	/* position: absolute; */
 	top: calc(129px + 20px + 50px);
 	left: 0px;
+	margin-left: -6px;
+	margin-top: -6px;
+	background-color: #CCF2F4;
+	box-shadow: -10px -10px 10px -10px rgb(145, 144, 144);
 }
 .details .inside-content{
 	margin: auto;
