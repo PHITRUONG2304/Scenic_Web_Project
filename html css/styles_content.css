@@ -131,6 +131,8 @@ li{
 	width: 70%;
 	background-color: #F4F9F9;
 	position: relative;
+	box-shadow: 0 -2px 2px -2px rgb(0 0 0), 0 2px 15px -5px rgb(0 0 0), 2px 0 5px -5px rgb(0 0 0);
+	margin-bottom: 100px;	
 }
 .header-content{
 	width: 100%;
@@ -158,6 +160,7 @@ li{
 	right: 10px;
 	bottom: 0;
 }
+
 .detail-content{
 	margin-top: 20px;
 	display: flex;
@@ -223,4 +226,211 @@ li{
 .addr-block img{
 	border: solid 5px rgba(0, 0, 0, 0.623);
 	border-radius: 50px;
+}
+.source {
+	margin: 15px 55px;
+}
+.source p{
+	float: left;
+}
+.line1{
+	margin-left: 30%;
+}
+.icon {
+	margin-left: 20%;
+}
+.icon button{
+	float: left;
+	width: 15%;
+	height: 50px;
+	border: none;
+	background-color: transparent;
+	
+}
+.view1 {
+margin-left:  50px;
+margin-top: 35px;
+}
+.icon div{
+	float: left;
+	margin: 10px;
+	width: 25%;
+}
+.view2 {
+	margin-left:  65px;
+	margin-top: 35px;
+}
+
+.view3 {
+	margin-left:  50px;
+	margin-top: 35px;
+}
+.line2{
+	margin-left: 21%;
+}
+.avatar {
+	
+	
+	border-radius: 50%;
+}
+.xxx{
+	margin-top: 50px;
+	margin-left: 50px;
+
+}
+.search1 {
+	position: relative;
+	height: 52px;
+	width: 70%;
+	background-color: #ccf2f4;
+	border-radius: 30px;
+	margin-left: 150px;
+	margin-right: 150px;
+	border: 0;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.315);
+	top: -55px;
+	left: -20px;
+}
+.search1 input{
+	position: absolute;
+	left: 20px;
+	width: 85%;
+	height: 100%;
+	font-size: 22px;
+	border-width: 0;
+	color: #000;
+	background: transparent;
+	text-shadow: 2px 2px 5px rgba(97, 95, 95, 0.7);
+}
+.search1 input:focus{
+	outline: none;
+	border: none;
+}
+.boxed {
+	width: 90%;
+	height: 200px;
+	margin-left: 5%;
+	top: -30px;
+	background-color: white;
+	position:relative;
+	border-radius: 25px;
+}
+.avatar1 {
+	margin-left: 10px;
+	padding-top: 10px;
+	width: 10%;
+	float: left;
+}
+.boxed1 {
+	position:relative;
+	font-size:12px;
+	background-color: #ccf2f4;
+	border-radius: 25px;
+	width: 30%;
+	margin-left: 8%;
+	top: 10px;
+	padding: 10px;
+}
+.boxed1 h{
+	float: left;
+}
+.boxed1 p{
+	padding-top: 5px;
+}
+.avatar2 {
+	margin-left: 10%;
+	padding-top: 40px;
+	width: 10%;
+	float: left;
+}
+.boxed2 {
+	position:relative;
+	font-size:12px;
+	background-color: #ccf2f4;
+	border-radius: 25px;
+	width: 40%;
+	margin-left: 17%;
+	top: 40px;
+	padding: 10px;
+}
+.boxed2 h{
+	float: left;
+}
+.boxed2 p{
+	padding-top: 5px;
+}
+.footer {
+	width: 100%;
+	height: 420px;
+	background-color: #ccf2f4;
+
+} 
+.end1 {
+	height: 100%;
+	width: 33%;
+	float: left;
+	margin: 0;
+}
+.end1 p{
+	margin-top: 0px;
+	color: #2b4f60;
+	margin-left: 90px;
+	font-size:x-large;
+}
+.end1 img{
+	height: 120px;
+	width: 280px;
+	margin: 50px 70px;
+}
+.end2{
+	height: 100%;
+	width: 40%;
+	float: left;
+}
+
+
+.contact1 {
+	margin-left: 100px;
+	margin-top: 100px;
+	font-size: 50px;
+	color: #2b4f60;
+	
+}
+
+.xxxx {
+	margin-top: 30px;
+	float: left;
+}
+.xxxx div{
+	margin: 20px 90px;
+	color: #2b4f60;
+	font-weight: 550;
+	display: flex;
+}
+.xxxx p{
+	color: #2b4f60;
+	margin: 4px 0 5px 5px;
+	margin-left: 5px;
+	margin-top: 4px;
+	font-weight: 200;
+	font-size: 30px;
+}
+
+.nine{
+padding-top: 80px;
+font-size: 70px;
+color: #2b4f60;
+}
+.ninenine {
+color: #2b4f60;
+margin-top: 30px;
+font-size: 70px;
+}
+.viewed {
+	color: #2b4f60;
+	font-size: 30px;
+}
+.onlined {
+	color: #2b4f60;
+	font-size: 30px;
 }
