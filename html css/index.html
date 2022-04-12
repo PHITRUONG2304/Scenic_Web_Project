@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>DropDown Menu and slider</title>
+	<title>Danh lam thắng cảnh Việt Nam</title>
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 	<link href="fontawesome-free-6.0.0-web/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
@@ -73,15 +74,15 @@
 				<div id="myDropdown_1" class="dropdown-content">
 					<ul>
 						<li>
-							<span>Miền Bắc</span> <input type="checkbox">
+							<span>Miền Bắc</span> <input type="checkbox" name="getRegion" value="Miền Bắc">
 						</li>
 						
 						<li>
-							<span>Miền Trung</span> <input type="checkbox">
+							<span>Miền Trung</span> <input type="checkbox" name="getRegion" value="Miền Trung">
 						</li>
 						
 						<li>
-							<span>Miền Nam</span> <input type="checkbox">
+							<span>Miền Nam</span> <input type="checkbox" name="getRegion" value="Miền Nam">
 						</li>
 					</ul>
 				</div>
@@ -92,19 +93,19 @@
 				<div id="myDropdown_2" class="dropdown-content">
 					<ul>
 						<li>
-							<span>Mùa Xuân</span> <input type="checkbox">
+							<span>Mùa Xuân</span> <input type="checkbox" name="getTime" value="Mùa Xuân">
 						</li>
 						
 						<li>
-							<span>Mùa Hạ</span> <input type="checkbox">
+							<span>Mùa Hạ</span> <input type="checkbox" name="getTime" value="Mùa Hạ">
 						</li>
 						
 						<li>
-							<span>Mùa Thu</span> <input type="checkbox">
+							<span>Mùa Thu</span> <input type="checkbox" name="getTime" value="Mùa Thu">
 						</li>
 						
 						<li>
-							<span>Mùa Đông</span> <input type="checkbox">
+							<span>Mùa Đông</span> <input type="checkbox" name="getTime" value="Mùa Đông">
 						</li>
 					</ul>
 				</div>
@@ -115,119 +116,104 @@
 				<div id="myDropdown_3" class="dropdown-content">
 					<ul>
 						<li>
-							<span>Biển, sông, suối</span> <input type="checkbox">
+							<span>Biển, sông, suối</span> <input type="checkbox" name="getType" value="Biển, sông, suối">
 						</li>
 						
 						<li>
-							<span>Đồi núi</span> <input type="checkbox">
+							<span>Đồi núi</span> <input type="checkbox" name="getType" value="Đồi núi">
 						</li>
 						
 						<li>
-							<span>Hang động</span> <input type="checkbox">
+							<span>Hang động</span> <input type="checkbox" name="getType" value="Hang động">
 						</li>
 						
 						<li>
-							<span>Thành phố</span> <input type="checkbox">
+							<span>Thành phố</span> <input type="checkbox" name="getType" value="Thành phố">
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="searchBtnMenu">
-			<button> <img src="image/icon_1.png" style="width: 50px; height: 50px;"/></button>
+			<button onclick=getChecked() style="cursor:pointer;"> <img src="image/icon_1.png" style="width: 50px; height: 50px;"></button>
 		</div>
 
 	</div>
 	<div class="content">
+		<p name="informResult"></p>
 		<div class="item">
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=0 >
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">Gềnh Đá Địa</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=1>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=2>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=3>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<!-- <a href="https://github.com/" target="_blank"> -->
+			<div class="boxed" onclick="changePage(this.value)" value=4>
+				<img class="item-img" src="image/heart.png">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			</a>
+			<div class="boxed" onclick="changePage(this.value)" value=5>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=6>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=7>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p c lass="item-description">description</p>
 				</div>
 			</div>
-			<div class="boxed">
-				<img src="image/ghềnh đá địa 3.jpg">
+			<div class="boxed" onclick="changePage(this.value)" value=8>
+				<img class="item-img" src="image/ghềnh đá địa 3.jpg">
 				<div class="item-info">
 					<h2 class="item-name">Gềnh đá địa</h2>
 					<p class="item-address">Phú Yên</p>
-					<p class="item-description">Gềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan
-							và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An,
-							tỉnh Phú Yên</p>
+					<p class="item-description">description</p>
 				</div>
 			</div>
 		</div>
@@ -235,7 +221,7 @@
 		<div class="page">
 			<div class="page-numbers p1">
 				<ul>
-					<a href="#"><li><</li></a>
+					<a href="#"><li></li></a>
 					<a class="is-active" href="#"><li>1</li></a>
 					<a href="#"><li>2</li></a>
 					<a href="#"><li>3</li></a>
@@ -249,7 +235,6 @@
 	</div>
 
 
-	
 
 	<div class="footer">
 		<div class="end1">
@@ -360,7 +345,8 @@
 			
 		}
 	</script>
-</body>
 
+	<script src="source.js"></script>
+</body>
 
 </html>
