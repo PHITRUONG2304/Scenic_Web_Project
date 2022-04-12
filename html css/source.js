@@ -135,63 +135,24 @@ var jsonData = {
  };
 
 
-/*
-// get box from html (from line 70 to 136)
-let boxes=document.getElementsByClassName("boxed");
-let dispName=document.getElementsByClassName("item-name");
-let dispAddress=document.getElementsByClassName("item-address");
-let dispDescription=document.getElementsByClassName("item-description");
-let dispRegion=document.getElementsByClassName("item-region");
-let dispTime=document.getElementsByClassName("item-time");
-let box=document.getElementsByClassName("boxed")
-displayData(jsonData.ScenicSpots);
-
-function noResult()
-{
-  var inform=document.getElementsByName("informResult");
-  inform[0].innerHTML="Không tìm thấy kết quả nào phù hợp!";
-}
-
-
-//display data to boxed
-// status: unfinish
-function displayData(data)
-{
-  let size=data.length;
-  if (size==0) {
-    noResult();
-  }
-  for (let i=0; i<size; i++)
-  {
-    dispName[i].innerHTML=data[i].name;
-    dispAddress[i].innerHTML=data[i].address;
-    dispDescription[i].innerHTML=data[i].description;
-    // dispRegion[i].innerHTML=jsonData.ScenicSpots[i].region;
-    // dispTime[i].innerHTML=jsonData.ScenicSpots[i].time;
-  }
-
-  let box=document.getElementsByClassName("boxed")
-  for (let i=0; i<9; i++)
-  {
-    if (i<size) box[i].style.display="block";
-    else box[i].style.display="none";
-  }
-  console.log(data)
-}
-*/
-
-/**
- * new function to display data by box
- * 
- */
-
 let boxes=document.getElementsByClassName("boxed");
 function displayData(data)
 {
   let size=data.length;
   // base case: no result
   //
-
+  let inform=document.getElementById("informNoResult");
+  inform.style.display="none";
+  if (size==0)
+  {
+    for (let i=0;i<9;i++)
+    {
+      boxes[i].style.display="none";
+    }
+    inform.innerHTML="Không tìm thấy kết quả nào phù hợp";
+    inform.style.display="block";
+    return;
+  }
   // remaining case: display data
   for (let i=0; i<9; i++)
   {
