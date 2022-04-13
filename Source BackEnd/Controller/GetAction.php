@@ -6,12 +6,12 @@
         $action_type = $_GET['action'];
         switch ($action_type)
         {           
-            case 'getContent':
+            case 'getContentForMain':
                 $content = new Content();
                 echo $content->get_full();
                 break;
 
-            case 'getContentWithCode':
+            case 'getContentForDetail':
                 if(isset($_GET['code']))
                 {
                    $content = new Content();
@@ -20,12 +20,12 @@
                 else echo "No Code";
                 break;
 
-            case 'getPicture':
+            case 'getPictureForMain':
                 $picture = new Picture();
                 echo $picture->get_avatar();
                 break;
 
-            case 'getPictureWithCode':
+            case 'getPictureForDetail':
                 if(isset($_GET['code']))
                 {
                     $picture = new Picture();
