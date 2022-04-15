@@ -134,6 +134,81 @@ var jsonData = {
   ]
  };
 
+ var margin = 0;
+ var interval_slides = setInterval(changeImg, 7500);
+ document.querySelector("#bottom_1").style.backgroundColor = "#fff";
+ document.querySelector("#bottom_1").style.transform = "scale(1.5, 1.5)";
+ function changeImg(){
+   margin -= 20;
+   if(margin < -60){
+     margin = 0;
+   }
+   var img = document.querySelector(".s1");
+   img.style.marginLeft = margin + "%";
+   zoombtnSlide(margin);
+ }
+
+ function handleBtn(number){
+   clearInterval(interval_slides);
+   var img = document.querySelector(".s1");
+   switch(number){
+     case 1:arguments
+       margin += 20;
+       break;
+     case 2:arguments
+       margin -= 20;
+       break;	
+   }
+   if(margin > 0){
+     margin = -60;
+   }
+   else if (margin < -60){
+     margin = 0;
+   }
+   img.style.marginLeft = margin + "%";
+   zoombtnSlide(margin);
+   interval_slides = setInterval(changeImg, 7500);
+ }
+
+ function zoombtnSlide(number){
+   let bottom, oldBottom;
+   switch(number){
+     case 0:
+       bottom = document.querySelector("#bottom_1");
+       break;
+     case -20:
+       bottom = document.querySelector("#bottom_2");
+       break;
+     case -40: 
+       bottom = document.querySelector("#bottom_3");
+       break;
+     case -60: 
+       bottom = document.querySelector("#bottom_4");
+       break;
+   }
+
+   document.querySelectorAll(".navigation .bar").forEach(element => {
+     element.style.removeProperty("background-color");
+     element.style.removeProperty("transform");
+   });
+
+   bottom.style.backgroundColor = "#fff";
+   bottom.style.transform = "scale(1.5, 1.5)";
+ }
+ function myFunction(number) {
+   switch(number){
+     case 1:
+       document.getElementById("myDropdown_1").classList.toggle("show");
+       break;
+     case 2:
+       document.getElementById("myDropdown_2").classList.toggle("show");
+       break;
+     case 3:
+       document.getElementById("myDropdown_3").classList.toggle("show"); 
+       break;
+   }
+   
+ }
 
 let boxes=document.getElementsByClassName("boxed");
 function displayData(data)

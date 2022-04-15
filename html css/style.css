@@ -1,7 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	color:white;
+	color:black;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -180,8 +180,7 @@ li{
 	height: 100px;
 	background-color: #f4f9f9;
 	box-shadow: 0px 2px 10px rgb(145, 144, 144);
-	z-index: 2;
-	position: relative;
+	z-index: 1000;
 }
 
 /* Dropdown Button */
@@ -250,6 +249,7 @@ li{
 	padding: 15px 5px;
 	text-decoration: none;
 	display: block;
+	min-height: 35px;
 }
 .dropdown-content span{
 	float: left;
@@ -269,9 +269,25 @@ li{
 .show {
 	display:block;
 }
+.hot{
+	margin-top: 25px;
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+.hot button{
+	float: right;
+	width: 60%;
+	height: 50px;
+	background-color: #FFC288;
+	text-decoration: none;
+	border: none;
+	border-radius: 25px;
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+}
 .searchBtnMenu{
 	float: left;
-	width: 40%;
+	width: 20%;
 	text-align: center;
 	margin-top: 25px;
 }
@@ -279,136 +295,83 @@ li{
 	background-color: transparent;
 	border: none;
 }
-/* .root{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	margin-bottom: 0;
-	justify-content: space-around;
-}
-.root button{
-	list-style: none;
-	font-size: 23px;
-	color: #000;
-	z-index: 1000;
-}
-ul.root li{
-	list-style: none;
-	position: relative;
-	cursor: pointer;
 
-}
-ul.root>li::after{
-	content: "";
-	background-color: black;
-	position: absolute;
-	bottom: -15px;
-	left: 20%;
-	height: 4px;
-	width: 0;
-	transition: 0.1s;
-	border-radius: 2px;
-}
-
-.root .btn-menu:hover{
-	transition: all 0.3s;
-	transform: scale(1.1);
-}
-ul.root>li:hover::after,ul.root>li:focus::after{
-	width: 60%;
-}
-.menu {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 100px;
-	box-shadow: 0px 2px 10px rgb(145, 144, 144);
-	z-index: 2;
-	position: relative;
-}
-.container1 .menu-list{
-	width: 220px;
-	background: #dbf0f3;
-	min-height: 80px;
-	display: none;
-	position: absolute;
-	top: 30px;
-	left: -10px;
-	z-index: 3;	
-	padding-left: 12px;
-}
-.menu-list input{
-	width: 20px;
-	height: 20px;
-	line-height: 100%;
-}
-
-.show{
-	display: block;
-}
-/* .root li:hover .menu-list{
-	display: block;
-} */
-/* .menu-list input{
-	float: right;
-}
-.menu-list li{
-	margin-top: 5px;
-	margin-right: 10px;
-}
-.root li button {
-	background-color: transparent;
-	border: none;
-}
-.root li button:hover{
-	cursor: pointer;
-} */
 .content {
 	width: 100%;
-	height: 100vh;
-	background: #f4f9f9;
+}
+.content #informNoResult{
+	display: none;
 }
 .item{
-	width: 95%;
-	margin-left: 2.5%;
-	padding-top:5%;
-	height: calc(3*145px + 6*20px + 0.05*130vh);
+	width: 85%;
+	margin: auto;
+	/* padding-top: 20px; */
+	padding: 2% 5%;
+	background-color: #FCECDD;
+	box-shadow: 1px 1px 8px 5px #AAA;
 }
 .boxed {
-	float: left;
-	width: calc(33.3333% - 2*60px);
-	margin: 20px 60px;
-	height: 145px;
-	background: #ccf2f4;
-	border-radius: 35px;
-	align-items: center;
-	box-shadow: 0px 5px 2px #ccc;;
-}
-.boxed:hover{
-	transform: scale(1.2);
-}
-.boxed img {
-	float: left;
-	width: 100px;
-	height: 100px;
+	width: 100%;
+	margin: 20px 0px;
+	height: 160px;
+	background-color: #FFC288;
 	border-radius: 20px;
-	margin-top: calc((145px - 100px)/2); 
-	margin-left: calc((145px - 100px)/2);
-	margin-right: 15px;
+	box-shadow: 0px 5px 2px #ccc;
+	padding: 10px;
+	align-items: center;
+	position: relative;
+}
+
+.boxed:hover{
+	transform: scale(1.03);
+	background-color: #CF8D2F;
+}
+.boxed:hover *{
+	color: #fff;
+}
+.boxed .item-interact{
+	display: none;
+	position: absolute;
+	right: 30px;
+	top: 10px;
+}
+
+.boxed:hover .item-interact{
+	display: block;
+}
+
+.boxed .item-img{
+	position: relative;
+	height: 100%;
+}
+.boxed img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	height: 85%;
+	border-radius: 10px;
 }
 .boxed .item-info{
-	height: 100px;
-	margin-top: calc((145px - 100px)/2); 
+	height: 100%;
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	
 }
-.boxed .item-info h2, p{
-	color: black;
+.item-info ul{
+	text-align: left;
 }
-.item-info .item-description{
-	white-space: nowrap; 
-	overflow: hidden;
-	/* word-break: break-word; */
-	text-overflow: in;
+.item-info ul li{
+	margin-right: 20px;
+	display: inline;
+	color: rgba(28, 26, 26, 0.71);
+}
+.item-info p{
+	/* white-space: nowrap; */
+	overflow-x: hidden;
+	text-overflow: ellipsis;
 }
 .page{
 	width: 100%;
@@ -418,7 +381,6 @@ ul.root>li:hover::after,ul.root>li:focus::after{
 	padding: 30px 0;
 	text-align: center;
 	position: relative;
-	margin-top: 60px;
   }
 .page-numbers::before{
 	content: "";
@@ -459,77 +421,49 @@ ul.root>li:hover::after,ul.root>li:focus::after{
 	color: #fff;
 }
 .footer {
+	margin-top: 80px;
 	width: 100%;
-	height: 420px;
+	height: 220px;
 	background-color: #ccf2f4
-
 } 
-.end1 {
+.footer .end1{
 	height: 100%;
-	width: 33%;
-	float: left;
-	margin: 0;
+	position: relative;
 }
-.end1 p{
-	margin-top: 0px;
-	color: #2b4f60;
-	margin-left: 90px;
-	font-size:x-large;
+.footer .end1>div{
+	width: 80%;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-.end1 img{
-	height: 120px;
-	width: 280px;
-	margin: 50px 70px;
+.footer .end1 p{
+	font-size: 18px;
 }
-.end2{
+.footer .end2{
+	line-height: 220px;
+}
+.end3{
+	padding: 0 100px;
 	height: 100%;
-	width: 40%;
-	float: left;
 }
-
-
-.contact1 {
-	margin-left: 100px;
-	margin-top: 100px;
-	font-size: 50px;
-	color: #2b4f60;
-	
+.end3 .footer-phone{
+	display: flex
 }
-
-.xxx {
-	margin-top: 30px;
-	float: left;
+.end3 .footer-email{
+	display: flex
 }
-.xxx div{
-	margin: 20px 90px;
-	color: #2b4f60;
-	font-weight: 550;
-	display: flex;
+.end3 .social-contact ul{
+	display: flex
 }
-.xxx p{
-	color: #2b4f60;
-	margin: 4px 0 5px 5px;
-	margin-left: 5px;
-	margin-top: 4px;
-	font-weight: 200;
-	font-size: 30px;
+.end3 img, .end3 li{
+	margin-right: 15px;
 }
-
-.nine{
-padding-top: 80px;
-font-size: 70px;
-color: #2b4f60;
+.end3 p{
+	margin-top: 2px;
+	font-size: 20px;
 }
-.ninenine {
-color: #2b4f60;
-margin-top: 30px;
-font-size: 70px;
-}
-.viewed {
-	color: #2b4f60;
-	font-size: 30px;
-}
-.onlined {
-	color: #2b4f60;
-	font-size: 30px;
+.end3 i{
+	margin-top: 15px;
+	font-size: 25px;
 }
