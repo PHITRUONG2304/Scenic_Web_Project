@@ -33,7 +33,7 @@
         function get_full()
         {
             global $DB_CONT;
-            $sql = "SELECT NameContent FROM $DB_CONT";
+            $sql = "SELECT Name, Address FROM $DB_CONT";
             $result = $this->conn->query($sql);
             if($result->num_rows > 0)
             {
