@@ -1,4 +1,5 @@
 // Fake data to test
+const maxShowItems = 9;
 var jsonData = {"ScenicSpots":
 [{
 	"id":0,
@@ -162,9 +163,11 @@ var jsonData = {"ScenicSpots":
 		"region":"Miền Trung",
 		"time":"Mùa Thu",
 		"type":"Biển, sông, suối"}]};
+var contentPage = document.querySelector(".page ul");
+var currentPage = 1;
 // Xử lý chuyển ảnh động
 var margin = 0;
-var interval_slides = setInterval(changeImg, 7500);
+var interval_slides = setInterval(changeImgSlider, 7500);
 document.querySelector("#bottom_1").style.backgroundColor = "#fff";
 document.querySelector("#bottom_1").style.transform = "scale(1.5, 1.5)";
 function changeImgSlider() {
@@ -246,7 +249,7 @@ function displayData(data) {
 	let inform = document.getElementById("informNoResult");
 	inform.style.display = "none";
 	if (size == 0) {
-		for (let i = 0; i < 9; i++) {
+		for (let i = 0; i < maxShowItems; i++) {
 			boxes[i].style.display = "none";
 		}
 		inform.innerHTML = "Không tìm thấy kết quả nào phù hợp";
@@ -254,7 +257,7 @@ function displayData(data) {
 		return;
 	}
 	// remaining case: display data
-	for (let i = 0; i < 9; i++) {
+	for (let i = 0; i < maxShowItems; i++) {
 		if (i < size) {
 			boxes[i].style.display = "block";
 			boxes[i].querySelector(".item-name").innerHTML = data[i].name;
@@ -299,14 +302,17 @@ function filterSS(re, ti, ty) {
 	displayData(filterData);
 }
 
-function changePageNumber(number, element){
+function changePageNumber(number){
+	
+	let elmPage = document.querySelectorAll(".page button");
+	currentPage = number;
 	var newArray = jsonData.ScenicSpots;
-	document.querySelectorAll(".page button").forEach((elm)=>{
+	elmPage.forEach((elm)=>{
 		if(elm.classList.contains("is-active")){
 			elm.classList.remove("is-active")
 		}
 	})
-	element.classList.add("is-active")
+	elmPage[number].classList.add("is-active")
 	let temp = newArray.filter(item=>{
 		return item.id < 10*number && item.id >= 10*(number-1);
 	})
@@ -314,6 +320,21 @@ function changePageNumber(number, element){
 	document.querySelector('.container1').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 	// If it not work, please enter "chrome://flags/#smooth-scrolling" and enable Smooth Scrolling.
 	displayData(temp);
+}
+function changeCurrentPage(info){
+	var maxPage = Math.ceil(jsonData.ScenicSpots.length/9);
+	if(info == 1){
+		if(currentPage+1 <= maxPage){
+			currentPage += 1;
+			changePageNumber(currentPage);
+		}
+	}
+	else{
+		if(currentPage-1 > 0){
+			currentPage -= 1;
+			changePageNumber(currentPage);
+		}
+	}
 }
 // get data from checkbox
 // status: finish
@@ -332,8 +353,25 @@ function getChecked() {
 	}
 	filterSS(re, ti, ty);
 }
+function renderData(data){
+	var maxPage = Math.ceil(data.length/9);
+	var newText = "";
+	newText += "<button onclick='changeCurrentPage(0)'><li><</li></button>";
+	for(var i = 0; i < maxPage; i++){
+		if(i == 0){
+			newText += `<button class="is-active"  onclick="changePageNumber(${i+1})"><li>${i+1}</li></button>`;
+		}
+		else{
+			newText += `<button onclick="changePageNumber(${i+1})"><li>${i+1}</li></button>`;
+		}
+	}
+	newText += '<button onclick="changeCurrentPage(1)"><li>></li></button>';
+
+	contentPage.innerHTML = newText;
+}
 
 displayData(jsonData.ScenicSpots)
+renderData(jsonData.ScenicSpots)
 // console.log(jsonData.ScenicSpots[0].address)
 // function change page by id
 // status: unfinish
