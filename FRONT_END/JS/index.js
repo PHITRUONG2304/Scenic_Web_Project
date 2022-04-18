@@ -1,218 +1,173 @@
-var margin = 0;
-var interval_slides = setInterval(changeImg, 7500);
-document.querySelector("#bottom_1").style.backgroundColor = "#fff";
-document.querySelector("#bottom_1").style.transform = "scale(1.5, 1.5)";
-function changeImg() {
-	margin -= 20;
-	if (margin < -60) {
-		margin = 0;
-	}
-	var img = document.querySelector(".s1");
-	img.style.marginLeft = margin + "%";
-	zoombtnSlide(margin);
-}
-
-function handleBtn(number) {
-	clearInterval(interval_slides);
-	var img = document.querySelector(".s1");
-	switch (number) {
-		case 1: arguments
-			margin += 20;
-			break;
-		case 2: arguments
-			margin -= 20;
-			break;
-	}
-	if (margin > 0) {
-		margin = -60;
-	}
-	else if (margin < -60) {
-		margin = 0;
-	}
-	img.style.marginLeft = margin + "%";
-	zoombtnSlide(margin);
-	interval_slides = setInterval(changeImg, 7500);
-}
-
-function zoombtnSlide(number) {
-	let bottom, oldBottom;
-	switch (number) {
-		case 0:
-			bottom = document.querySelector("#bottom_1");
-			break;
-		case -20:
-			bottom = document.querySelector("#bottom_2");
-			break;
-		case -40:
-			bottom = document.querySelector("#bottom_3");
-			break;
-		case -60:
-			bottom = document.querySelector("#bottom_4");
-			break;
-	}
-
-	document.querySelectorAll(".navigation .bar").forEach(element => {
-		element.style.removeProperty("background-color");
-		element.style.removeProperty("transform");
-	});
-
-	bottom.style.backgroundColor = "#fff";
-	bottom.style.transform = "scale(1.5, 1.5)";
-}
-function myFunction(number) {
-	switch (number) {
-		case 1:
-			document.getElementById("myDropdown_1").classList.toggle("show");
-			break;
-		case 2:
-			document.getElementById("myDropdown_2").classList.toggle("show");
-			break;
-		case 3:
-			document.getElementById("myDropdown_3").classList.toggle("show");
-			break;
-	}
-
-}
 // Fake data to test
-var jsonData = {
-	'ScenicSpots':
-		[
-			{
-				id: 1,
-				srcImag: 'img/1.jpg',
-				name: "Phong Nha Kẻ Bàng",
-				address: "Miền Nam",
-				description: "...",
-				region: "Miền Nam",
-				time: "Mùa Thu",
-				type: "..."
-			},
-			{
-				id: 2,
-				name: "Quần thể di tích cố đô Huế",
-				address: "address",
-				description: "description",
-				region: "Miền Bắc",
-				time: "Mùa Hạ",
-				type: "Đồi núi"
-			},
-			{
-				id: 3,
-				name: "Bà Nà Hills",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "Mùa Thu",
-				type: "type"
-			},
-			{
-				id: 4,
-				name: "Thánh địa Mỹ Sơn",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 5,
-				name: "Gềnh Đá Địa",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 6,
-				name: "Hang Rái",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 7,
-				name: "Vịnh Nha Trang",
-				address: "Miền Nam",
-				description: "description",
-				region: "Miền Nam",
-				time: "Mùa Thu",
-				type: "Thành phố"
-			},
-
-			{
-				id: 8,
-				name: "Mũi Né",
-				address: "Miền Nam",
-				description: "description",
-				region: "Miền Nam",
-				time: "Mùa Thu",
-				type: "Thành phố"
-			},
-			{
-				id: 9,
-				name: "Thành Nhà Hồ",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 10,
-				name: "Thành nhà Hồ",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 11,
-				name: "Kỳ Co Eo Gió",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			},
-			{
-				id: 12,
-				name: "Lý Sơn",
-				address: "Miền Nam",
-				description: "description",
-				region: "region",
-				time: "Mùa Thu",
-				type: "type"
-			},
-			{
-				id: 13,
-				name: "Vườn quốc gia Pù mát",
-				address: "Miền Nam",
-				description: "description",
-				region: "region",
-				time: "Mùa Thu",
-				type: "type"
-			},
-			{
-				id: 14,
-				name: "Đà Lạt",
-				address: "address",
-				description: "description",
-				region: "region",
-				time: "time",
-				type: "type"
-			}
-		]
-};
-
+var jsonData = {"ScenicSpots":
+[{
+	"id":0,
+	"srcImag":"img/img1.jpg",
+	"name":"Phong Nha Kẻ Bàng",
+	"address":"Quảng Bình",
+	"description":"Toàn là hang động",
+	"region":"Miền Trung",
+	"time":"Mùa Thu",
+	"type":"Hang động"},
+	{
+		"id":1,
+		"srcImag":"img/img2.jpg",
+		"name":"Quần thể Di tích Cố Đô Huế",
+		"address":"Huế",
+		"description":"Toàn là di tích",
+		"region":"Miền Trung",
+		"time":"Mùa Thu",
+		"type":"Thành phố"},
+	{
+		"id":2,
+		"srcImag":"img/img3.jpg",
+		"name":"Bà Nà Hills",
+		"address":"Đà Nẵng",
+		"description":"Đường lên tiên cảnh",
+		"region":"Miền Trung",
+		"time":"Mùa Thu",
+		"type":"Đồi núi"},
+	{
+		"id":3,
+		"srcImag":"img/img4.jpg",
+		"name":"Thánh địa Mỹ Sơn",
+		"address":"Quảng Nam",
+		"description":"Toàn là thánh địa",
+		"region":"Miền Trung",
+		"time":"Mùa Thu",
+		"type":"Đồi núi"},
+	{
+		"id":4,
+		"srcImag":"img/img5.jpg",
+		"name":"Gềnh Đá Đĩa",
+		"address":"Phú Yên",
+		"description":"Toàn là đá",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Biển, sông, suối"},
+	{
+		"id":5,
+		"srcImag":"img/img6.jpg",
+		"name":"Hang rái",
+		"address":"Ninh Thuận",
+		"description":"Toàn là hang rái",
+		"region":"Miền Trung",
+		"time":"Mùa Đông",
+		"type":"Hang động"},
+	{
+		"id":6,
+		"srcImag":"img/img7.jpg",
+		"name":"Vịnh Nha Trang",
+		"address":"Khánh Hòa",
+		"description":"Toàn là vịnh",
+		"region":"Miền Trung",
+		"time":"Mùa Xuân",
+		"type":"Thành phố"},
+	{
+		"id":7,
+		"srcImag":"img/img8.jpg",
+		"name":"Mũi né",
+		"address":"Bình Thuận",
+		"description":"Toàn là mũi né",
+		"region":"Miền Trung",
+		"time":"Mùa Thu",
+		"type":"Đồi núi"},
+	{
+		"id":8,
+		"srcImag":"img/img9.jpg",
+		"name":"Thành Nhà Hồ",
+		"address":"Thanh Hóa",
+		"description":"Toàn là nhà cổ",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Thành phố"},
+	{
+		"id":9,
+		"srcImag":"img/img10.jpg",
+		"name":"Kỳ Co Eo Gió",
+		"address":"Bình Định",
+		"description":"Toàn là gió",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Biển, sông, suối"},
+	{
+		"id":10,
+		"srcImag":"img/img11.jpg",
+		"name":"Lý Sơn",
+		"address":"Quảng Ngãi",
+		"description":"Toàn là núi",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Đồi núi"},
+	{
+		"id":11,
+		"srcImag":"img/img12.jpg",
+		"name":"Đảo Phú Quý",
+		"address":"Phan Thiết",
+		"description":"Toàn là đảo",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Biển, sông, suối"},
+	{
+		"id":12,
+		"srcImag":"img/img13.jpg",
+		"name":"Vườn quốc gia Pù Mát",
+		"address":"Nghệ An",
+		"description":"Toàn là cỏ",
+		"region":"Miền Trung",
+		"time":"Mùa Xuân",
+		"type":"Đồi núi"},
+	{
+		"id":13,
+		"srcImag":"img/img14.jpg",
+		"name":"Đà Lạt",
+		"address":"Lâm Đồng",
+		"description":"Toàn là thành phố",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Thành phố"},
+	{
+		"id":14,
+		"srcImag":"img/img15.jpg",
+		"name":"Biển Thiên Cầm",
+		"address":"Hà Tĩnh",
+		"description":"Toàn là biển",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Biển, sông, suối"},
+	{
+		"id":15,
+		"srcImag":"img/img16.jpg",
+		"name":"Địa đạo Vịnh Mốc",
+		"address":"Quảng Trị",
+		"description":"Toàn là địa đạo",
+		"region":"Miền Trung",
+		"time":"Mùa Đông",
+		"type":"Hang động"},
+	{
+		"id":16,
+		"srcImag":"img/img17.jpg",
+		"name":"Nhà Rông Kon Klor",
+		"address":"Kon Tum",
+		"description":"Toàn là nhà rông",
+		"region":"Miền Trung",
+		"time":"Mùa Hạ",
+		"type":"Đồi núi"},
+	{
+		"id":17,
+		"srcImag":"img/img18.jpg",
+		"name":"Biển Hồ Tơ Nưng",
+		"address":"Pleiku",
+		"description":"Toàn là biển",
+		"region":"Miền Trung",
+		"time":"Mùa Thu",
+		"type":"Biển, sông, suối"}]};
+// Xử lý chuyển ảnh động
 var margin = 0;
 var interval_slides = setInterval(changeImg, 7500);
 document.querySelector("#bottom_1").style.backgroundColor = "#fff";
 document.querySelector("#bottom_1").style.transform = "scale(1.5, 1.5)";
-function changeImg() {
+function changeImgSlider() {
 	margin -= 20;
 	if (margin < -60) {
 		margin = 0;
@@ -222,7 +177,7 @@ function changeImg() {
 	zoombtnSlide(margin);
 }
 
-function handleBtn(number) {
+function handleBtnSlider(number) {
 	clearInterval(interval_slides);
 	var img = document.querySelector(".s1");
 	switch (number) {
@@ -241,7 +196,7 @@ function handleBtn(number) {
 	}
 	img.style.marginLeft = margin + "%";
 	zoombtnSlide(margin);
-	interval_slides = setInterval(changeImg, 7500);
+	interval_slides = setInterval(changeImgSlider, 7500);
 }
 
 function zoombtnSlide(number) {
@@ -269,7 +224,7 @@ function zoombtnSlide(number) {
 	bottom.style.backgroundColor = "#fff";
 	bottom.style.transform = "scale(1.5, 1.5)";
 }
-function myFunction(number) {
+function showDropDown(number) {
 	switch (number) {
 		case 1:
 			document.getElementById("myDropdown_1").classList.toggle("show");
@@ -283,7 +238,6 @@ function myFunction(number) {
 	}
 
 }
-
 let boxes = document.getElementsByClassName("boxed");
 function displayData(data) {
 	let size = data.length;
@@ -304,7 +258,10 @@ function displayData(data) {
 		if (i < size) {
 			boxes[i].style.display = "block";
 			boxes[i].querySelector(".item-name").innerHTML = data[i].name;
-			boxes[i].querySelector(".item-address").innerHTML = data[i].address;
+			boxes[i].querySelector(".item-address").innerHTML = `Địa chỉ: ${data[i].address}`;
+			boxes[i].querySelector(".item-idea-time").innerHTML = `Thời gian lý tưởng: ${data[i].time}`;
+			boxes[i].querySelector(".item-region").innerHTML = `Khu vực: ${data[i].region}`;
+			boxes[i].querySelector(".item-type").innerHTML = `Thể loại: ${data[i].type}`;
 			boxes[i].querySelector(".item-description").innerHTML = data[i].description;
 			boxes[i].value = data[i].id;
 		}
@@ -342,6 +299,22 @@ function filterSS(re, ti, ty) {
 	displayData(filterData);
 }
 
+function changePageNumber(number, element){
+	var newArray = jsonData.ScenicSpots;
+	document.querySelectorAll(".page button").forEach((elm)=>{
+		if(elm.classList.contains("is-active")){
+			elm.classList.remove("is-active")
+		}
+	})
+	element.classList.add("is-active")
+	let temp = newArray.filter(item=>{
+		return item.id < 10*number && item.id >= 10*(number-1);
+	})
+
+	document.querySelector('.container1').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	// If it not work, please enter "chrome://flags/#smooth-scrolling" and enable Smooth Scrolling.
+	displayData(temp);
+}
 // get data from checkbox
 // status: finish
 function getChecked() {
@@ -360,6 +333,8 @@ function getChecked() {
 	filterSS(re, ti, ty);
 }
 
+displayData(jsonData.ScenicSpots)
+// console.log(jsonData.ScenicSpots[0].address)
 // function change page by id
 // status: unfinish
 /**
