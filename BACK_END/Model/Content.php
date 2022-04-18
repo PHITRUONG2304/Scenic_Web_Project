@@ -50,7 +50,7 @@
         function get_with_code($code)
         {
             global $DB_CONT;
-            $sql = "SELECT * FROM $DB_CONT WHERE Code='$code'";
+            $sql = "SELECT * FROM $DB_CONT WHERE id='$code'";
             $result = $this->conn->query($sql);
             if($result->num_rows > 0)
             {
