@@ -12,10 +12,10 @@
                 break;
 
             case 'getContentForDetail':
-                if(isset($_GET['code']))
+                if(isset($_GET['id']))
                 {
                    $content = new Content();
-                   echo $content->get_with_code($_GET['code']); 
+                   echo $content->get_with_code($_GET['id']); 
                 }
                 else echo "No Code";
                 break;

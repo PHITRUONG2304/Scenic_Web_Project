@@ -32,8 +32,8 @@
 
         function get_full()
         {
-            global $DB_CONT;
-            $sql = "SELECT * FROM $DB_CONT";
+            global $DB_SCN;
+            $sql = "SELECT * FROM $DB_SCN";
             $result = $this->conn->query($sql);
             if($result->num_rows > 0)
             {
@@ -50,7 +50,7 @@
         function get_with_code($code)
         {
             global $DB_CONT;
-            $sql = "SELECT Content FROM $DB_CONT WHERE Code='$code'";
+            $sql = "SELECT * FROM $DB_CONT WHERE Code='$code'";
             $result = $this->conn->query($sql);
             if($result->num_rows > 0)
             {

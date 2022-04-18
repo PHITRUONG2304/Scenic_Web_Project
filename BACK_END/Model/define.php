@@ -3,7 +3,8 @@
     define("USER", "root");
     define("PASS", "");
     define("DB_NAME", "DanhLamThangCanh");
-    $DB_CONT = "scenic";
+    $DB_SCN = "scenic";
     $DB_CMT = "comment";
     $DB_EMT = "emotion";
+    $DB_CONT = "content"
 ?>

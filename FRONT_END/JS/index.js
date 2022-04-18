@@ -370,7 +370,21 @@ function renderData(data){
 
 	contentPage.innerHTML = newText;
 }
-renderData(jsonData.ScenicSpots)
+
+function fetchData() {
+    var xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText)
+			renderData(data);
+        }
+    }
+    xhttp.open("GET", "../BACK_END/Controller/GetAction.php?action=getContentForMain")
+    xhttp.send()
+}
+
+fetchData();
+// renderData(jsonData.ScenicSpots)
 // console.log(jsonData.ScenicSpots[0].address)
 // function change page by id
 // status: unfinish
