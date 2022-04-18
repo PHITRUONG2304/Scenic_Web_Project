@@ -354,7 +354,7 @@ function getChecked() {
 	filterSS(re, ti, ty);
 }
 function renderData(data){
-	displayData(jsonData.ScenicSpots)
+	displayData(data)
 	var maxPage = Math.ceil(data.length/9);
 	var newText = "";
 	newText += "<button onclick='changeCurrentPage(0)'><li><</li></button>";
