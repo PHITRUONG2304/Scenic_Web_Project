@@ -330,10 +330,10 @@ function changePageNumber(number){
 		}
 	})
 	elmPage[number].classList.add("is-active")
-	let temp = newArray.filter(item=>{
-		return item.id < 10*number && item.id >= 10*(number-1);
-	})
-	console.log(temp)
+
+	let temp = newArray.slice((number-1)*9,  number*9);
+	console.log(temp);
+
 	document.querySelector('.container1').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 	// If it not work, please enter "chrome://flags/#smooth-scrolling" and enable Smooth Scrolling.
 	displayData(temp);
