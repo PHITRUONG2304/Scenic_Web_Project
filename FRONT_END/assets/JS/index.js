@@ -1,6 +1,7 @@
 // Fake data to test
 const maxShowItems = 9;
-var jsonData =
+var jsonData; 
+/* =
 [{
 	"id":0,
 	"srcImag":"img/img1.jpg",
@@ -163,7 +164,12 @@ var jsonData =
 		"region":"Miền Trung",
 		"time":"Mùa Thu",
 		"type":"Biển, sông, suối"}];
+*/
+var filteringData;
+
+
 var contentPage = document.querySelector(".page ul");
+// console.log(contentPage);
 var currentPage = 1;
 // Xử lý chuyển ảnh động
 var margin = 0;
@@ -241,7 +247,14 @@ function showDropDown(number) {
 	}
 
 }
-let boxes = document.querySelectorAll(".boxed");
+
+
+
+
+
+// let boxes = document.querySelectorAll(".boxed");
+let boxes = document.getElementsByClassName("boxed row");
+// console.log(boxes);
 function displayData(data) {
 	let size = data.length;
 	// base case: no result
@@ -266,6 +279,7 @@ function displayData(data) {
 			boxes[i].querySelector(".item-region").innerHTML = `Khu vực: ${data[i].region}`;
 			boxes[i].querySelector(".item-type").innerHTML = `Thể loại: ${data[i].type}`;
 			boxes[i].querySelector(".item-description").innerHTML = data[i].description;
+			boxes[i].querySelector(".item-img img").src = `./assets/picture/${data[i].picture}`;
 			boxes[i].value = data[i].id;
 		}
 		else boxes[i].style.display = "none";
@@ -277,36 +291,39 @@ function displayData(data) {
 // filter data base on (region, time, type) with checkbox
 // status: finish
 function filterSS(re, ti, ty) {
-	var filterData = jsonData.ScenicSpots;
-
-	tempFilter = filterData.filter
+	//fetchData();
+	//var filterData = jsonData;
+	filteringData = jsonData;
+	console.log("Here!");
+	tempFilter = filteringData.filter
 		(
 			function (item) { return (item.time == ti[0] || item.time == ti[1] || item.time == ti[2] || item.time == ti[3]) }
 		)
-	if (tempFilter.length != 0 || ti.length != 0) filterData = tempFilter;
+	if (tempFilter.length != 0 || ti.length != 0) filteringData = tempFilter;
 
-	tempFilter = filterData.filter
+	tempFilter = filteringData.filter
 		(
 			function (item) { return (item.region == re[0] || item.region == re[1] || item.region == re[2]) }
 		)
-	if (tempFilter.length != 0 || re.length != 0) filterData = tempFilter;
+	if (tempFilter.length != 0 || re.length != 0) filteringData = tempFilter;
 
-	tempFilter = filterData.filter(function (item) {
+	tempFilter = filteringData.filter(function (item) {
 		return (item.type == ty[0] || item.type == ty[1] || item.type == ty[2] || item.type == ty[3])
 	}
 	)
-	if (tempFilter.length != 0 || ty.length != 0) filterData = tempFilter;
+	if (tempFilter.length != 0 || ty.length != 0) filteringData = tempFilter;
 
-	// console.log(filterData);
+	 console.log(filteringData);
 	// let l=filterData.length;
-	displayData(filterData);
+	renderData(filteringData);
+	//displayData(filteringData);
 }
 
 function changePageNumber(number){
 	
 	let elmPage = document.querySelectorAll(".page button");
 	currentPage = number;
-	var newArray = jsonData;
+	var newArray = filteringData;
 	elmPage.forEach((elm)=>{
 		if(elm.classList.contains("is-active")){
 			elm.classList.remove("is-active")
@@ -371,12 +388,14 @@ function renderData(data){
 	contentPage.innerHTML = newText;
 }
 
+
 function fetchData() {
     var xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText)
 			jsonData = data;
+			filteringData = data;
 			console.log(data)
 			renderData(data);
         }
@@ -386,14 +405,4 @@ function fetchData() {
 }
 
 fetchData();
-// renderData(jsonData.ScenicSpots)
-// console.log(jsonData.ScenicSpots[0].address)
-// function change page by id
-// status: unfinish
-/**
- * 0. Đã lấy được id của các box
- * 1. send id to server
- * 2. lấy dữ liệu của cái danh lam có id đó
- * 3. mở tab mới với dữ liệu đó
- * 
- */
+
