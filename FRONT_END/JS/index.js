@@ -1,6 +1,6 @@
 // Fake data to test
 const maxShowItems = 9;
-var jsonData = {"ScenicSpots":
+var jsonData =
 [{
 	"id":0,
 	"srcImag":"img/img1.jpg",
@@ -162,7 +162,7 @@ var jsonData = {"ScenicSpots":
 		"description":"Toàn là biển",
 		"region":"Miền Trung",
 		"time":"Mùa Thu",
-		"type":"Biển, sông, suối"}]};
+		"type":"Biển, sông, suối"}];
 var contentPage = document.querySelector(".page ul");
 var currentPage = 1;
 // Xử lý chuyển ảnh động
@@ -241,7 +241,7 @@ function showDropDown(number) {
 	}
 
 }
-let boxes = document.getElementsByClassName("boxed");
+let boxes = document.querySelectorAll(".boxed");
 function displayData(data) {
 	let size = data.length;
 	// base case: no result
@@ -306,7 +306,7 @@ function changePageNumber(number){
 	
 	let elmPage = document.querySelectorAll(".page button");
 	currentPage = number;
-	var newArray = jsonData.ScenicSpots;
+	var newArray = jsonData;
 	elmPage.forEach((elm)=>{
 		if(elm.classList.contains("is-active")){
 			elm.classList.remove("is-active")
@@ -316,13 +316,13 @@ function changePageNumber(number){
 	let temp = newArray.filter(item=>{
 		return item.id < 10*number && item.id >= 10*(number-1);
 	})
-
+	console.log(temp)
 	document.querySelector('.container1').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 	// If it not work, please enter "chrome://flags/#smooth-scrolling" and enable Smooth Scrolling.
 	displayData(temp);
 }
 function changeCurrentPage(info){
-	var maxPage = Math.ceil(jsonData.ScenicSpots.length/9);
+	var maxPage = Math.ceil(jsonData.length/9);
 	if(info == 1){
 		if(currentPage+1 <= maxPage){
 			currentPage += 1;
@@ -376,6 +376,8 @@ function fetchData() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var data = JSON.parse(this.responseText)
+			jsonData = data;
+			console.log(data)
 			renderData(data);
         }
     }
