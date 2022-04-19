@@ -266,6 +266,7 @@ function displayData(data) {
 			boxes[i].querySelector(".item-region").innerHTML = `Khu vực: ${data[i].region}`;
 			boxes[i].querySelector(".item-type").innerHTML = `Thể loại: ${data[i].type}`;
 			boxes[i].querySelector(".item-description").innerHTML = data[i].description;
+			boxes[i].querySelector(".item-img img").src = `./assets/picture/${data[i].picture}`;
 			boxes[i].value = data[i].id;
 		}
 		else boxes[i].style.display = "none";
