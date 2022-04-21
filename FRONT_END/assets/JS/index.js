@@ -257,6 +257,7 @@ function searchByText() {
         if (removeVietnameseTones(JSON.stringify(jsonData[i])).toLowerCase().includes(valueSearch))
             filteringData.push(jsonData[i]);
 	renderData(filteringData);
+	document.querySelector('.container1').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 }
 
 
