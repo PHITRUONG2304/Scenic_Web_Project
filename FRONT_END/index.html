@@ -26,8 +26,8 @@
 			<img src="./assets/picture/img_display/webLogoVer2.png" style="width:160px;height:70px;">
 		</div>
 		<div class="search">
-			<input type="text" name="" placeholder="Tìm kiếm...">
-			<button id="searchBtn">
+			<input type="text" id="valueSearch" placeholder="Tìm kiếm...">
+			<button id="searchBtn" onclick="searchByText()">
 				<i class="fa-solid fa-magnifying-glass"></i>
 			</button>
 		</div>
@@ -157,7 +157,7 @@
 	<div class="content">
 		<p id="informNoResult"></p>
 		<div class="item">
-			<div class="boxed row" onclick="changePage(this.value)" value=0 style="cursor:pointer;">
+			<div class="boxed row" value=0 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -176,7 +176,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=1 style="cursor:pointer;">
+			<div class="boxed row" value=1 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -195,7 +195,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=2 style="cursor:pointer;">
+			<div class="boxed row" value=2 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -214,7 +214,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=3 style="cursor:pointer;">
+			<div class="boxed row" value=3 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -233,7 +233,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=4 style="cursor:pointer;">
+			<div class="boxed row" value=4 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -252,7 +252,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=5 style="cursor:pointer;">
+			<div class="boxed row" value=5 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -271,7 +271,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=6 style="cursor:pointer;">
+			<div class="boxed row" value=6 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -290,7 +290,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=7 style="cursor:pointer;">
+			<div class="boxed row" value=7 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>
@@ -309,7 +309,7 @@
 					<p class="item-description">Ghềnh Đá Địa là một danh thắng thiên nhiên kỳ thú về cảnh quan và độc đáo về địa chất ở Việt Nam, thắng cảnh này nằm tại xã An Ninh Đông, huyện Tuy An, tỉnh Phú Yên.</p>
 				</div>
 			</div>
-			<div class="boxed row" onclick="changePage(this.value)" value=8 style="cursor:pointer;">
+			<div class="boxed row" value=8 onclick="changePage(this.value)" style="cursor:pointer;">
 				<div class="item-interact">
 					<i class="fa-solid fa-heart"></i> <span>10</span>
 					<i class="fa-solid fa-comment"></i> <span>10</span>

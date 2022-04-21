@@ -1,8 +1,7 @@
 // Fake data to test
 const maxShowItems = 9;
-var jsonData; 
-/* =
-[{
+var jsonData=[
+	{
 	"id":0,
 	"srcImag":"img/img1.jpg",
 	"name":"Phong Nha Kẻ Bàng",
@@ -164,7 +163,7 @@ var jsonData;
 		"region":"Miền Trung",
 		"time":"Mùa Thu",
 		"type":"Biển, sông, suối"}];
-*/
+
 var filteringData;
 
 
@@ -249,7 +248,15 @@ function showDropDown(number) {
 }
 
 
-
+function searchByText() {
+	var valueSearch = document.getElementById("valueSearch").value;
+    let length=jsonData.length;
+	filteringData = []
+    for(let i = 0; i < length; i++)
+        if (JSON.stringify(jsonData[i]).includes(valueSearch))
+            filteringData.push(jsonData[i]);
+	renderData(filteringData);
+}
 
 
 // let boxes = document.querySelectorAll(".boxed");
