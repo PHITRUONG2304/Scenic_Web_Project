@@ -30,6 +30,15 @@
 			<button id="searchBtn" onclick="searchByText()">
 				<i class="fa-solid fa-magnifying-glass"></i>
 			</button>
+			<script>
+				var input = document.getElementById("valueSearch");
+				input.addEventListener("keyup", function(event) {
+				  if (event.keyCode === 13) {
+				   event.preventDefault();
+				   document.getElementById("searchBtn").click();
+				  }
+				});
+			</script>
 		</div>
 
 		<div class="contact">
